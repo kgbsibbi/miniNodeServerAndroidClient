@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">MyMemo</string>
+    <string name="common_ok">확인</string>
+    <string name="common_cancel">취소</string>
+
+    <string name="auth_login">로그인</string>
+    <string name="auth_register">사용자 추가</string>
+    <string name="auth_userid">아이디</string>
+    <string name="auth_name">이름</string>
+    <string name="auth_password">비밀번호</string>
+    <string name="auth_logout">로그아웃</string>
+    <string name="auth_delete">사용자 삭제</string>
+    <string name="auth_required">모든 항목을 입력해주세요.</string>
+
+    <string name="memo_edit_title">제목</string>
+    <string name="memo_edit_content">본문</string>
+    <string name="memo_edit_time">작성 시간</string>
+    <string name="memo_edit_save">저장</string>
+    <string name="memo_edit_browse">불러오기</string>
+    <string name="memo_edit_image">첨부 이미지</string>
+    <string name="memo_edit_delete_image">이미지 삭제</string>
+</resources>
