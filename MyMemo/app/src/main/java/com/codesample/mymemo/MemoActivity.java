@@ -116,8 +116,8 @@ public class MemoActivity extends AppCompatActivity {
     }
 
     private void saveMemo(){
-        String title = Objects.requireNonNull(binding.textTitle.getEditText()).getText().toString();
-        String content = Objects.requireNonNull(binding.textContent.getEditText()).getText().toString();
+        String title = Objects.requireNonNull(binding.editTextTitle.getText()).toString();
+        String content = Objects.requireNonNull(binding.editTextContent.getText()).toString();
         if(title.isEmpty()|| content.isEmpty()){
             Toast.makeText(this, R.string.auth_required, Toast.LENGTH_SHORT).show();
             return;
@@ -145,9 +145,11 @@ public class MemoActivity extends AppCompatActivity {
         saveRequest.enqueue(new Callback<Void>() {
             @Override
             public void onResponse(@NotNull Call<Void> call, @NotNull Response<Void> response) {
-                File cachedFile = new File(getCacheDir(), memo.originalFileName);
-                if(cachedFile.exists())
-                    cachedFile.delete();
+                if(memo.originalFileName!=null) {
+                    File cachedFile = new File(getCacheDir(), memo.originalFileName);
+                    if (cachedFile.exists())
+                        cachedFile.delete();
+                }
                 finish();
             }
             @Override
